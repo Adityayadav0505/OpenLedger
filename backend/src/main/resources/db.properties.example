@@ -1,0 +1,3 @@
+db.url=jdbc:mysql://localhost:3306/h2h_internship?useSSL=false
+db.user=YOUR_DB_USER
+db.pass=YOUR_DB_PASSWORD

@@ -1,0 +1,33 @@
+/* #div1 {
+    display: inline;
+    width: 33%;
+}
+
+#div2 {
+    width: 33%;
+    display: inline;
+    padding: 40rem;
+} */
+#div1 {
+    display: flex;
+    width: 65%;
+    align-items: center;
+    flex-direction: row;
+}
+
+#div2 {
+    display: flex;
+    width: 35%;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+}
+
+.headerWrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+}

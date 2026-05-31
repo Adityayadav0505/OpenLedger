@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\user\\\\documents\\\\projects\\\\2nd phase\\\\backend\" -Recurse -Force | Where-Object { $_.Name -match \"\\\\.\\(java|js|ts|xml|properties|json\\)$\" } | Select-Object -First 150)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\user\\\\documents\\\\projects\\\\2nd phase\\\\backend\\\\src\\\\main\\\\java\\\\com\\\\milestone2\" | ForEach-Object { $_.Name })"
+    ]
+  }
+}

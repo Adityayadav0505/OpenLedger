@@ -1,0 +1,31 @@
+# Build output
+target/
+build/
+*.war
+*.class
+
+# Database credentials — copy db.properties.example to db.properties and fill in your values
+db.properties
+
+# Node
+node_modules/
+.eslintcache
+npm-debug.log*
+
+# Portable dev runtime (MariaDB / Tomcat / Node) and the imported DB data
+.devstack/
+
+# IDE / editor
+.vscode/
+.idea/
+*.iml
+.settings/
+.project
+.classpath
+
+# Archived college exercises — not part of OpenLedger
+extras/
+
+# OS
+Thumbs.db
+.DS_Store

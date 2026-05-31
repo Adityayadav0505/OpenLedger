@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0"
+         metadata-complete="true">
+
+  <display-name>1805362</display-name>
+
+  <!-- CORS filter so the React dev server (http://localhost:3000) is allowed
+       to read responses from these APIs on http://localhost:8080. -->
+  <filter>
+    <filter-name>CorsFilter</filter-name>
+    <filter-class>com.milestone2.CorsFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>CorsFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <!-- The React app calls these exact *.do URLs (see Table.js / AddButton.js /
+       EditButton.js). They are mapped here to the corresponding servlets. -->
+  <servlet>
+    <servlet-name>fetchData</servlet-name>
+    <servlet-class>com.milestone2.dataRequestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>fetchData</servlet-name>
+    <url-pattern>/fetchdata.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>addData</servlet-name>
+    <servlet-class>com.milestone2.addEntityServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>addData</servlet-name>
+    <url-pattern>/addData.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>editData</servlet-name>
+    <servlet-class>com.milestone2.editEntityServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>editData</servlet-name>
+    <url-pattern>/editData.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>deleteData</servlet-name>
+    <servlet-class>com.milestone2.deleteEntityServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deleteData</servlet-name>
+    <url-pattern>/deleteData.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>searchData</servlet-name>
+    <servlet-class>com.milestone2.searchEntity</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>searchData</servlet-name>
+    <url-pattern>/searchData.do</url-pattern>
+  </servlet-mapping>
+
+</web-app>
